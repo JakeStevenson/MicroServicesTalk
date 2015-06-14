@@ -15,6 +15,20 @@ namespace CleanAir4You.com.Areas.AccountManagement.Controllers
         [HttpPost]
         public ActionResult Index(SignupViewModel model)
         {
+            //Create the User
+            return RedirectToAction("Bill");
+        }
+
+
+        [HttpGet]
+        public ActionResult Bill()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Bill(BillingViewModel model)
+        {
             return View("Success", model);
         }
     }
