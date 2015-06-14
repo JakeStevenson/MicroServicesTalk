@@ -1,0 +1,20 @@
+﻿@model CleanAir4You.com.Areas.AccountManagement.Models.SignupViewModel
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>title</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        Your name: @Html.TextBoxFor(x => x.Name)
+    </p>
+    <p>
+        Your email: @Html.TextBoxFor(x => x.Email)
+    </p>
+    <p>
+        Your password: @Html.PasswordFor(x=>x.Password)
+    </p>
+    <input type="submit" value="Register Me" />
+}
