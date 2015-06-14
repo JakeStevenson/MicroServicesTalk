@@ -16,20 +16,8 @@ namespace CleanAir4You.com.Areas.AccountManagement.Controllers
         public ActionResult Index(SignupViewModel model)
         {
             //Create the User
-            return RedirectToAction("Bill");
+            return RedirectToAction("Index", "Billing", new {area = "Billing"});
         }
 
-
-        [HttpGet]
-        public ActionResult Bill()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Bill(BillingViewModel model)
-        {
-            return View("Success", model);
-        }
     }
 }

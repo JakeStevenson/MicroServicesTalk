@@ -161,6 +161,11 @@
     <Compile Include="Areas\AccountManagement\AccountManagementAreaRegistration.cs" />
     <Compile Include="Areas\AccountManagement\Controllers\SignupController.cs" />
     <Compile Include="Areas\AccountManagement\Models\SignupViewModel.cs" />
+    <Compile Include="Areas\Billing\DTOs\BillingDto.cs" />
+    <Compile Include="Areas\Billing\Services\BillingService.cs" />
+    <Compile Include="Areas\AccountManagement\DTOs\UserDto.cs" />
+    <Compile Include="Areas\Billing\BillingAreaRegistration.cs" />
+    <Compile Include="Areas\Billing\Controllers\BillingController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -171,6 +176,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Areas\AccountManagement\Services\SignupService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,9 +190,11 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\AccountManagement\Views\web.config" />
     <Content Include="Areas\AccountManagement\Views\Signup\Index.cshtml" />
-    <Content Include="Areas\AccountManagement\Views\Signup\Success.cshtml" />
-    <Content Include="Areas\AccountManagement\Views\Signup\Bill.cshtml" />
-    <None Include="Areas\AccountManagement\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Billing\Views\Billing\Success.cshtml" />
+    <Content Include="Areas\Billing\Views\Billing\Index.cshtml" />
+    <Content Include="Areas\AccountManagement\Views\_ViewStart.cshtml" />
+    <None Include="Areas\Billing\Views\Billing\_ViewStart.cshtml" />
+    <Content Include="Areas\Billing\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -238,6 +246,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AccountManagement\Views\Shared\" />
+    <Folder Include="Areas\Billing\Models\" />
+    <Folder Include="Areas\Billing\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
