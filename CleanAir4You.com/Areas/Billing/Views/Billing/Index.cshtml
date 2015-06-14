@@ -10,6 +10,7 @@
     <p>
         Credit Card: @Html.TextBoxFor(x => x.CCNumber)
     </p>
+    @Html.HiddenFor(x=>x.Email)
 
     <input type="submit" value="Register Me"/>
 }

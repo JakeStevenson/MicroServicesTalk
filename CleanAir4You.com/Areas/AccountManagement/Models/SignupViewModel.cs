@@ -9,6 +9,7 @@
 
     public class BillingViewModel
     {
+        public string Email { get; set; }
         public string CCNumber { get; set; }
     }
 }
