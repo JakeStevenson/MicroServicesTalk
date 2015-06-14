@@ -3,8 +3,6 @@ using CleanAir4You.Bus;
 using CleanAir4You.com.Areas.AccountManagement.Models;
 using CleanAir4You.com.Tasks;
 using CleanAir4You.Contracts;
-using CleanAir4You.Contracts.AccountManagement;
-using CleanAir4You.Contracts.AccountManagement.Commands;
 
 namespace CleanAir4You.com.Areas.AccountManagement.Controllers
 {
@@ -27,8 +25,13 @@ namespace CleanAir4You.com.Areas.AccountManagement.Controllers
         [HttpPost]
         public ActionResult Index(SignupViewModel model)
         {
+<<<<<<< HEAD
+            //Create the User
+            return RedirectToAction("Index", "Billing", new {area = "Billing"});
+=======
             bus.Send(new SignupUserCommand(){Email = model.Email, Name = model.Name, Password = model.Password});
-            return RedirectToAction("Index", "Billing", new {area = "Billing", email=model.Email});
+            return View("Success", model);
+>>>>>>> 02ec7fb... Messaging
         }
 
     }

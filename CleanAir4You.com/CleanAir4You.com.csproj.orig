@@ -182,12 +182,15 @@
     <Compile Include="Areas\AccountManagement\AccountManagementAreaRegistration.cs" />
     <Compile Include="Areas\AccountManagement\Controllers\SignupController.cs" />
     <Compile Include="Areas\AccountManagement\Models\SignupViewModel.cs" />
+<<<<<<< HEAD
     <Compile Include="Areas\Billing\DTOs\BillingDto.cs" />
     <Compile Include="Areas\Billing\Services\BillingService.cs" />
     <Compile Include="Areas\AccountManagement\DTOs\UserDto.cs" />
     <Compile Include="Areas\Billing\BillingAreaRegistration.cs" />
     <Compile Include="Areas\Billing\Controllers\BillingController.cs" />
+=======
     <Compile Include="CastleWindsor\WebInstaller.cs" />
+>>>>>>> 02ec7fb... Messaging
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
