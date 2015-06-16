@@ -7,9 +7,9 @@ namespace CleanAir4You.com.Areas.AccountManagement.Controllers
 {
     public class SignupController : Controller
     {
-        private readonly IBus bus;
+        private readonly ISendOnlyBus bus;
 
-        public SignupController(IBus bus)
+        public SignupController(ISendOnlyBus bus)
         {
             this.bus = bus;
         }

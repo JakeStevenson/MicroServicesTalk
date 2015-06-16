@@ -15,6 +15,7 @@ namespace CleanAir4You.com
         {
             var container = new WindsorContainer();
             container.Install(new WebInstaller());
+            container.Install(new BusInstaller());
 
             ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(container));
 

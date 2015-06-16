@@ -7,9 +7,9 @@ namespace CleanAir4You.com.Areas.Billing.Controllers
 {
     public class BillingController : Controller
     {
-        private readonly IBus bus;
+        private readonly ISendOnlyBus bus;
 
-        public BillingController(IBus bus)
+        public BillingController(ISendOnlyBus bus)
         {
             this.bus = bus;
         }
