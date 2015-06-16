@@ -60,6 +60,10 @@
       <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.5.2.2\lib\net45\NServiceBus.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -280,17 +284,13 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CleanAir4You.Bus\CleanAir4You.Bus.csproj">
-      <Project>{806A73FA-E751-4EF7-87C6-F74CE1382D4B}</Project>
-      <Name>CleanAir4You.Bus</Name>
+    <ProjectReference Include="..\AccountManagement\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public.csproj">
+      <Project>{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}</Project>
+      <Name>AccountManagement.Contracts.Public</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CleanAir4You.Contracts\CleanAir4You.Contracts.csproj">
-      <Project>{E543941C-5FD7-44AC-9F86-105DDE735A42}</Project>
-      <Name>CleanAir4You.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CleanAir4You.Tasks\CleanAir4You.Tasks.csproj">
-      <Project>{C1ADE74B-C246-430F-A6C6-82B54B782BFC}</Project>
-      <Name>CleanAir4You.Tasks</Name>
+    <ProjectReference Include="..\Billing\Billing.Contracts.Public\Billing.Contracts.Public.csproj">
+      <Project>{78D0E96F-4216-463C-9C56-9A73CACA21F8}</Project>
+      <Name>Billing.Contracts.Public</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

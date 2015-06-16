@@ -1,10 +1,7 @@
 ﻿using System.Web.Mvc;
-using CleanAir4You.Bus;
+using AccountManagement.Contracts.Public.Commands;
 using CleanAir4You.com.Areas.AccountManagement.Models;
-using CleanAir4You.com.Tasks;
-using CleanAir4You.Contracts;
-using CleanAir4You.Contracts.AccountManagement;
-using CleanAir4You.Contracts.AccountManagement.Commands;
+using NServiceBus;
 
 namespace CleanAir4You.com.Areas.AccountManagement.Controllers
 {

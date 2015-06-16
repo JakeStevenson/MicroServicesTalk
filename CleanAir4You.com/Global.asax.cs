@@ -3,10 +3,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Castle.Windsor;
-using CleanAir4You.Bus.Ioc;
-using CleanAir4You.com.Areas.AccountManagement.Controllers;
 using CleanAir4You.com.CastleWindsor;
-using CleanAir4You.Tasks.Ioc;
 using CommonServiceLocator.WindsorAdapter;
 using Microsoft.Practices.ServiceLocation;
 
@@ -18,8 +15,6 @@ namespace CleanAir4You.com
         {
             var container = new WindsorContainer();
             container.Install(new WebInstaller());
-            container.Install(new BusInstaller());
-            container.Install(new TasksInstaller());
 
             ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(container));
 

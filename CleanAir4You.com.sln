@@ -5,11 +5,11 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanAir4You.com", "CleanAir4You.com\CleanAir4You.com.csproj", "{47BE21C0-1EB9-4B90-977E-406A9D136143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanAir4You.Tasks", "CleanAir4You.Tasks\CleanAir4You.Tasks.csproj", "{C1ADE74B-C246-430F-A6C6-82B54B782BFC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Contracts - NUGET WOULD BE BETTER", "External Contracts - NUGET WOULD BE BETTER", "{5875AEBB-FE8A-49A7-9E47-FF9927DEAF8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanAir4You.Contracts", "CleanAir4You.Contracts\CleanAir4You.Contracts.csproj", "{E543941C-5FD7-44AC-9F86-105DDE735A42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagement.Contracts.Public", "AccountManagement\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public.csproj", "{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanAir4You.Bus", "CleanAir4You.Bus\CleanAir4You.Bus.csproj", "{806A73FA-E751-4EF7-87C6-F74CE1382D4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing.Contracts.Public", "Billing\Billing.Contracts.Public\Billing.Contracts.Public.csproj", "{78D0E96F-4216-463C-9C56-9A73CACA21F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,20 +21,20 @@ Global
 		{47BE21C0-1EB9-4B90-977E-406A9D136143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47BE21C0-1EB9-4B90-977E-406A9D136143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47BE21C0-1EB9-4B90-977E-406A9D136143}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1ADE74B-C246-430F-A6C6-82B54B782BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1ADE74B-C246-430F-A6C6-82B54B782BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1ADE74B-C246-430F-A6C6-82B54B782BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1ADE74B-C246-430F-A6C6-82B54B782BFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E543941C-5FD7-44AC-9F86-105DDE735A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E543941C-5FD7-44AC-9F86-105DDE735A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E543941C-5FD7-44AC-9F86-105DDE735A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E543941C-5FD7-44AC-9F86-105DDE735A42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{806A73FA-E751-4EF7-87C6-F74CE1382D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{806A73FA-E751-4EF7-87C6-F74CE1382D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{806A73FA-E751-4EF7-87C6-F74CE1382D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{806A73FA-E751-4EF7-87C6-F74CE1382D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B} = {5875AEBB-FE8A-49A7-9E47-FF9927DEAF8E}
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8} = {5875AEBB-FE8A-49A7-9E47-FF9927DEAF8E}
 	EndGlobalSection
 EndGlobal

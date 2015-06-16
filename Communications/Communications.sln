@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communications.Host", "Communications.Host\Communications.Host.csproj", "{3BD8FBC5-220D-4ECA-B9DB-CD58404101D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communications.Contracts.Public", "Communications.Contracts.Public\Communications.Contracts.Public.csproj", "{79AA36A9-CF09-4681-8CF2-8A7B8B617A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communications.Tasks", "Communications.Tasks\Communications.Tasks.csproj", "{06DFCEE3-C65B-4197-A25F-05100376D119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagement.Contracts.Public", "..\AccountManagement\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public.csproj", "{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Public References -- NUGET WOULD BE BETTER", "External Public References -- NUGET WOULD BE BETTER", "{332B4071-7F27-4149-A129-63674644FFBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing.Contracts.Public", "..\Billing\Billing.Contracts.Public\Billing.Contracts.Public.csproj", "{78D0E96F-4216-463C-9C56-9A73CACA21F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BD8FBC5-220D-4ECA-B9DB-CD58404101D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD8FBC5-220D-4ECA-B9DB-CD58404101D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD8FBC5-220D-4ECA-B9DB-CD58404101D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD8FBC5-220D-4ECA-B9DB-CD58404101D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AA36A9-CF09-4681-8CF2-8A7B8B617A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AA36A9-CF09-4681-8CF2-8A7B8B617A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AA36A9-CF09-4681-8CF2-8A7B8B617A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AA36A9-CF09-4681-8CF2-8A7B8B617A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DFCEE3-C65B-4197-A25F-05100376D119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DFCEE3-C65B-4197-A25F-05100376D119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DFCEE3-C65B-4197-A25F-05100376D119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DFCEE3-C65B-4197-A25F-05100376D119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B} = {332B4071-7F27-4149-A129-63674644FFBE}
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8} = {332B4071-7F27-4149-A129-63674644FFBE}
+	EndGlobalSection
+EndGlobal

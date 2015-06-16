@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
-using CleanAir4You.Bus;
+using Billing.Contracts.Public;
 using CleanAir4You.com.Areas.AccountManagement.Models;
-using CleanAir4You.Contracts.Billing.Commands;
+using NServiceBus;
 
 namespace CleanAir4You.com.Areas.Billing.Controllers
 {

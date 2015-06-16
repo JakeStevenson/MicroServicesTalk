@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing.Host", "Billing.Host\Billing.Host.csproj", "{CA28A9BA-B685-4F17-B936-9843A16C595C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing.Tasks", "Billing.Tasks\Billing.Tasks.csproj", "{EE951A7D-05DA-4471-B28A-FCAEFF686CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billing.Contracts.Public", "Billing.Contracts.Public\Billing.Contracts.Public.csproj", "{78D0E96F-4216-463C-9C56-9A73CACA21F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA28A9BA-B685-4F17-B936-9843A16C595C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA28A9BA-B685-4F17-B936-9843A16C595C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA28A9BA-B685-4F17-B936-9843A16C595C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA28A9BA-B685-4F17-B936-9843A16C595C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE951A7D-05DA-4471-B28A-FCAEFF686CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE951A7D-05DA-4471-B28A-FCAEFF686CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE951A7D-05DA-4471-B28A-FCAEFF686CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE951A7D-05DA-4471-B28A-FCAEFF686CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D0E96F-4216-463C-9C56-9A73CACA21F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
