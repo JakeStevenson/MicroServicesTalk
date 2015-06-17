@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-using AccountManagement.Contracts.Public.Commands;
+using AccountManagement.Contracts.Public.Commands.v1;
 using CleanAir4You.com.Areas.AccountManagement.Models;
 using NServiceBus;
 
@@ -24,8 +24,13 @@ namespace CleanAir4You.com.Areas.AccountManagement.Controllers
         [HttpPost]
         public ActionResult Index(SignupViewModel model)
         {
-            bus.Send(new SignupUserCommand(){Email = model.Email, Name = model.Name, Password = model.Password});
-            return RedirectToAction("Index", "Billing", new {area = "Billing", email=model.Email});
+            bus.Send<ISignupUserCommand>(x =>
+            {
+                x.Email = model.Email;
+                x.Name = model.Name;
+                x.Password = model.Password;
+            });
+            return RedirectToAction("Index", "Billing", new { area = "Billing", email = model.Email });
         }
 
     }

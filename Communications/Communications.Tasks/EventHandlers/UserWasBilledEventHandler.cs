@@ -1,10 +1,10 @@
-﻿using Billing.Contracts.Public.Events;
-using Communications.Contracts.Public.Commands;
+﻿using Billing.Contracts.Public.Events.v1;
+using Communications.Contracts.Public.Commands.v1;
 using NServiceBus;
 
 namespace Communications.Tasks.EventHandlers
 {
-    public class UserWasBilledEventHandler : IHandleMessages<UserWasBilledEvent>
+    public class UserWasBilledEventHandler : IHandleMessages<IUserWasBilledEvent>
     {
         private readonly IBus bus;
 
@@ -13,9 +13,12 @@ namespace Communications.Tasks.EventHandlers
             this.bus = bus;
         }
 
-        public void Handle(UserWasBilledEvent message)
+        public void Handle(IUserWasBilledEvent message)
         {
-            bus.SendLocal(new SendBillingMessage(){Email = message.Email});
+            bus.SendLocal<ISendBillingMessage>((x) =>
+            {
+                x.Email = message.Email;
+            });
         }
     }
 

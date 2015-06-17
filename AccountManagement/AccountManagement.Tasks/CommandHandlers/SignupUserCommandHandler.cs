@@ -1,11 +1,11 @@
 ﻿using System;
-using AccountManagement.Contracts.Public.Commands;
-using AccountManagement.Contracts.Public.Events;
+using AccountManagement.Contracts.Public.Commands.v1;
+using AccountManagement.Contracts.Public.Events.v1;
 using NServiceBus;
 
 namespace AccountManagement.Tasks.CommandHandlers
 {
-    public class SignupUserCommandHandler : IHandleMessages<SignupUserCommand>
+    public class SignupUserCommandHandler : IHandleMessages<ISignupUserCommand>
     {
         private readonly IBus bus;
 
@@ -14,10 +14,14 @@ namespace AccountManagement.Tasks.CommandHandlers
             this.bus = bus;
         }
 
-        public void Handle(SignupUserCommand message)
+        public void Handle(ISignupUserCommand message)
         {
             Console.WriteLine("Signing up the user {0}", message.Email);
-            bus.Publish(new UserHasSignedUp(){Email = message.Email, Name = message.Name});
+            bus.Publish<IUserHasSignedUp>((x) =>
+            {
+                x.Email = message.Email;
+                x.Name = message.Name;
+            });
         }
     }
 }

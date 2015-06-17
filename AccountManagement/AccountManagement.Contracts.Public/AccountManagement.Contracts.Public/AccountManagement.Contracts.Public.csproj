@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\SignupUserCommand.cs" />
-    <Compile Include="Events\UserHasSignedUp.cs" />
+    <Compile Include="Commands\v1\ISignupUserCommand.cs" />
+    <Compile Include="Events\v1\IUserHasSignedUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

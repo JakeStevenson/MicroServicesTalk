@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\EmailWelcomeMessage.cs" />
-    <Compile Include="Commands\SendBillingMessage.cs" />
+    <Compile Include="Commands\v1\EmailWelcomeMessage.cs" />
+    <Compile Include="Commands\v1\SendBillingMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

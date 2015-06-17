@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\BillTheUserCommand.cs" />
-    <Compile Include="Events\UserWasBilledEvent.cs" />
+    <Compile Include="Commands\v1\BillTheUserCommand.cs" />
+    <Compile Include="Events\v1\UserWasBilledEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

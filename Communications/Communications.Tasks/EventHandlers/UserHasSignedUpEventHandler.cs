@@ -1,10 +1,10 @@
-﻿using AccountManagement.Contracts.Public.Events;
-using Communications.Contracts.Public.Commands;
+﻿using AccountManagement.Contracts.Public.Events.v1;
+using Communications.Contracts.Public.Commands.v1;
 using NServiceBus;
 
 namespace Communications.Tasks.EventHandlers
 {
-    public class UserHasSignedUpEventHandler :IHandleMessages<UserHasSignedUp>
+    public class UserHasSignedUpEventHandler :IHandleMessages<IUserHasSignedUp>
     {
         private readonly IBus bus;
 
@@ -13,9 +13,13 @@ namespace Communications.Tasks.EventHandlers
             this.bus = bus;
         }
 
-        public void Handle(UserHasSignedUp message)
+        public void Handle(IUserHasSignedUp message)
         {
-            bus.SendLocal(new EmailWelcomeMessage(){Email = message.Email, Name = message.Name});
+            bus.SendLocal<IEmailWelcomeMessage>((x)=>
+            {
+                x.Email = message.Email;
+                x.Name = message.Name;
+            });
         }
     }
 

@@ -1,11 +1,11 @@
 ﻿using System;
-using Billing.Contracts.Public;
-using Billing.Contracts.Public.Events;
+using Billing.Contracts.Public.Commands.v1;
+using Billing.Contracts.Public.Events.v1;
 using NServiceBus;
 
 namespace Billing.Tasks.CommandHandlers
 {
-    public class BillTheUserCommandHandler : IHandleMessages<BillTheUserCommand>
+    public class BillTheUserCommandHandler : IHandleMessages<IBillTheUserCommand>
     {
         private readonly IBus bus;
 
@@ -14,10 +14,13 @@ namespace Billing.Tasks.CommandHandlers
             this.bus = bus;
         }
 
-        public void Handle(BillTheUserCommand message)
+        public void Handle(IBillTheUserCommand message)
         {
             Console.WriteLine("Billing {0}", message.Email);
-            bus.Publish(new UserWasBilledEvent() { Email = message.Email });
+            bus.Publish<IUserWasBilledEvent>((x) =>
+            {
+                x.Email = message.Email;
+            });
         }
     }
 }
