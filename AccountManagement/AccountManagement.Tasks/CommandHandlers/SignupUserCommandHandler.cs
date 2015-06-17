@@ -1,5 +1,4 @@
 ﻿using System;
-using AccountManagement.Contracts.Public;
 using AccountManagement.Contracts.Public.Commands;
 using AccountManagement.Contracts.Public.Events;
 using NServiceBus;

@@ -7,7 +7,7 @@ namespace Communications.Host
 		This class configures this endpoint as a Server. More information about how to configure the NServiceBus host
 		can be found here: http://particular.net/articles/the-nservicebus-host
 	*/
-    public class EndpointConfig : IConfigureThisEndpoint
+    public class EndpointConfig : IConfigureThisEndpoint, AsA_Client, AsA_Server
     {
         public void Customize(BusConfiguration configuration)
         {
@@ -20,6 +20,7 @@ namespace Communications.Host
             
             //Also note that you can mix and match storages to fit you specific needs. 
             //http://docs.particular.net/nservicebus/persistence-order
+            configuration.UseSerialization<JsonSerializer>();
             configuration.UsePersistence<InMemoryPersistence>();
             configuration.UseTransport<RabbitMQTransport>();
             configuration.EndpointName("Communications.Host");

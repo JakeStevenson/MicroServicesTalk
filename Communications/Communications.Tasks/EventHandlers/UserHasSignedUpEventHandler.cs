@@ -15,7 +15,7 @@ namespace Communications.Tasks.EventHandlers
 
         public void Handle(UserHasSignedUp message)
         {
-            bus.Send(new EmailWelcomeMessage(){Email = message.Email, Name = message.Name});
+            bus.SendLocal(new EmailWelcomeMessage(){Email = message.Email, Name = message.Name});
         }
     }
 

@@ -15,7 +15,7 @@ namespace Communications.Tasks.EventHandlers
 
         public void Handle(UserWasBilledEvent message)
         {
-            bus.Send(new SendBillingMessage(){Email = message.Email});
+            bus.SendLocal(new SendBillingMessage(){Email = message.Email});
         }
     }
 

@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Communications.Contracts.Public.Commands;
+﻿using Communications.Contracts.Public.Commands;
 using NServiceBus;
 
 namespace Communications.Tasks.CommandHandlers
@@ -9,8 +8,7 @@ namespace Communications.Tasks.CommandHandlers
         public void Handle(EmailWelcomeMessage message)
         {
             //SEND AN EMAIL 
-            //THIS CAN BLOCK A WHILE!
-            Debug.WriteLine("Sending a welcome email to {0}", message.Email);
+            Console.WriteLine("Sending a welcome email to {0}", message.Email);
         }
     }
 }

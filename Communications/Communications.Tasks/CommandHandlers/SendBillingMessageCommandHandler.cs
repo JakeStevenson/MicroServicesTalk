@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 using Communications.Contracts.Public.Commands;
 using NServiceBus;
 
@@ -8,7 +8,7 @@ namespace Communications.Tasks.CommandHandlers
     {
         public void Handle(SendBillingMessage message)
         {
-            Debug.WriteLine("Sending a billing email to {0}", message.Email);
+            Console.WriteLine("Sending a billing email to {0}", message.Email);
         }
     }
 
