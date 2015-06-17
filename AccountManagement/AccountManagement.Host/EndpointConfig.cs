@@ -24,8 +24,6 @@ namespace AccountManagement.Host
             configuration.UsePersistence<InMemoryPersistence>();
             configuration.UseTransport<RabbitMQTransport>();
             configuration.EndpointName("AccountManagement.Host");
-            configuration.ScanAssembliesInDirectory(".");
-            configuration.AutoSubscribe();
         }
     }
 }

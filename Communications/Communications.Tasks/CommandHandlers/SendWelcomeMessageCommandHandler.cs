@@ -1,4 +1,5 @@
-﻿using Communications.Contracts.Public.Commands;
+﻿using System;
+using Communications.Contracts.Public.Commands;
 using NServiceBus;
 
 namespace Communications.Tasks.CommandHandlers
