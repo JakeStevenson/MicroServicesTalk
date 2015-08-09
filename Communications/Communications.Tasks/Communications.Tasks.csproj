@@ -32,8 +32,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccountManagement.Contracts.Public, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CleanAir4You.AccountManagement.Contracts.Public.1.0.0\lib\AccountManagement.Contracts.Public.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Billing.Contracts.Public, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CleanAir4You.Billing.Contracts.Public.1.0.0\lib\Billing.Contracts.Public.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Communications.Contracts.Public, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CleanAir4You.Communications.Contracts.Public.1.0.0\lib\Communications.Contracts.Public.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NServiceBus.5.2.2\lib\net45\NServiceBus.Core.dll</HintPath>
+      <HintPath>..\packages\CleanAir4You.Communications.Contracts.Public.1.0.0\lib\NServiceBus.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -53,20 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\AccountManagement\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public.csproj">
-      <Project>{8ae00194-7bc4-4e6d-b657-c7e0a7a40d1b}</Project>
-      <Name>AccountManagement.Contracts.Public</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Billing\Billing.Contracts.Public\Billing.Contracts.Public.csproj">
-      <Project>{78d0e96f-4216-463c-9c56-9a73caca21f8}</Project>
-      <Name>Billing.Contracts.Public</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Communications.Contracts.Public\Communications.Contracts.Public.csproj">
-      <Project>{79aa36a9-cf09-4681-8cf2-8a7b8b617a3e}</Project>
-      <Name>Communications.Contracts.Public</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

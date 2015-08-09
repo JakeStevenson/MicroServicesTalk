@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AccountManagement.Contracts.Public, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CleanAir4You.AccountManagement.Contracts.Public.1.0.0\lib\AccountManagement.Contracts.Public.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Billing.Contracts.Public, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CleanAir4You.Billing.Contracts.Public.1.0.0\lib\Billing.Contracts.Public.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
@@ -63,7 +72,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="NServiceBus.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NServiceBus.5.2.2\lib\net45\NServiceBus.Core.dll</HintPath>
+      <HintPath>..\packages\CleanAir4You.Billing.Contracts.Public.1.0.0\lib\NServiceBus.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NServiceBus.Transports.RabbitMQ, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
@@ -295,16 +304,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AccountManagement\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public\AccountManagement.Contracts.Public.csproj">
-      <Project>{8AE00194-7BC4-4E6D-B657-C7E0A7A40D1B}</Project>
-      <Name>AccountManagement.Contracts.Public</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Billing\Billing.Contracts.Public\Billing.Contracts.Public.csproj">
-      <Project>{78D0E96F-4216-463C-9C56-9A73CACA21F8}</Project>
-      <Name>Billing.Contracts.Public</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
