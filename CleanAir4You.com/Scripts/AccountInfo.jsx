@@ -4,7 +4,6 @@
     },
     handleSubmit: function (e) {
         e.preventDefault();
-        debugger;
         pageData.name = React.findDOMNode(this.refs.userName).value
         pageData.email = React.findDOMNode(this.refs.userEmail).value
         var password = React.findDOMNode(this.refs.password).value;
@@ -20,9 +19,7 @@
             data: data,
             success: function (data) {
                 this.setState({ completed: true });
-            }.bind(this),
-            error: function (xhr, status, err) {
-                console.error(this.props.url, status, err.toString());
+                dumbBus.updateAll("account");
             }.bind(this)
         });
     },

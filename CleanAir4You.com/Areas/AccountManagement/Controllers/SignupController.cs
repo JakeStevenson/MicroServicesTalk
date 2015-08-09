@@ -30,7 +30,7 @@ namespace CleanAir4You.com.Areas.AccountManagement.Controllers
                 x.Name = model.Name;
                 x.Password = model.Password;
             });
-            return new EmptyResult();
+            return Json(new {});
         }
 
     }

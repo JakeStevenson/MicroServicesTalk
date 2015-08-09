@@ -5,6 +5,14 @@
 }
 <script>
     var pageData = {};
+    var dumbBus = {
+        updaters: [],
+        updateAll: function(message) {
+            dumbBus.updaters.forEach(function(updater) {
+                updater(message);
+            });
+        }
+    };
 </script>
 <h2>Index</h2>
 

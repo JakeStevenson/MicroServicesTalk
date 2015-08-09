@@ -20,6 +20,7 @@ namespace CleanAir4You.com.CastleWindsor
 
                 configuration.UseTransport<RabbitMQTransport>();
                 configuration.UsePersistence<InMemoryPersistence>();
+                configuration.AssembliesToScan(AllAssemblies.Except("ClearScript"));
                 return Bus.CreateSendOnly(configuration);
             }));
         }
