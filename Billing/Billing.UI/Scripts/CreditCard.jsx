@@ -18,11 +18,9 @@
     },
     render: function () {
         return (
-         <form className="creditCardForm" onSubmit={this.handleSubmit}>
-            <div className="ca4u-creditCart">
+         <form class="creditCardForm" onSubmit={this.handleSubmit}>
                 Credit Card: <input type="text" ref="creditCard" />
           <input type="submit" />
-            </div>
          </form>
     );
     }
