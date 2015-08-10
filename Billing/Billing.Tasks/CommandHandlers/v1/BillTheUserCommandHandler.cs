@@ -3,7 +3,7 @@ using Billing.Contracts.Public.Commands.v1;
 using Billing.Contracts.Public.Events.v1;
 using NServiceBus;
 
-namespace Billing.Tasks.CommandHandlers
+namespace Billing.Tasks.CommandHandlers.v1
 {
     public class BillTheUserCommandHandler : IHandleMessages<IBillTheUserCommand>
     {
