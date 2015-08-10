@@ -294,6 +294,7 @@
     <Content Include="Areas\JoinUs\Views\_ViewStart.cshtml" />
     <Content Include="Areas\JoinUs\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\JoinUs\Views\JoinUs\Index.cshtml" />
+    <Content Include="Scripts\JoinUs.jsx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

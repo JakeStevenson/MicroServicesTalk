@@ -1,11 +1,11 @@
 ﻿var CreditCardBox = React.createClass({
     getInitialState: function(){
-        return { display: false};
+        return{display: true}
     },
     handleSubmit: function (e) {
         e.preventDefault();
         var creditCard = React.findDOMNode(this.refs.creditCard).value.trim();
-        var data = { CCNumber: creditCard, Email: pageData.email };
+        var data = { CCNumber: creditCard, Email: this.props.email};
         $.ajax({
             url: "http://billing.cleanair4you.com/CollectBilling/",
             dataType: 'json',
@@ -13,27 +13,21 @@
             data: data,
             success: function (data) {
                 this.setState({ display: false });
-                dumbBus.updateAll("ccdone");
+                this.props.complete();
             }.bind(this)
         });
     },
     render: function () {
         var self = this;
-        dumbBus.updaters.push(function (message) {
-            if(message==="account"){
-                self.setState({display: true});
-            }
-        });
-        return ( this.state.display ? 
+        return ( 
+            <div>
+                {this.state.display===false ? null : 
          <form class="creditCardForm" onSubmit={this.handleSubmit}>
                 Credit Card: <input type="text" ref="creditCard" />
           <input type="submit" />
          </form>
-         : null
-    );
+                }
+         </div>
+        );
     }
 });
-React.render(
-  <CreditCardBox />,
-  document.getElementById('ca4u-billing')
-);

@@ -4,13 +4,11 @@
     },
     handleSubmit: function (e) {
         e.preventDefault();
-        pageData.name = React.findDOMNode(this.refs.userName).value
-        pageData.email = React.findDOMNode(this.refs.userEmail).value
-        var password = React.findDOMNode(this.refs.password).value;
+        var email = React.findDOMNode(this.refs.userEmail).value;
         var data = {
-            Email: pageData.email,
-            Name: pageData.name,
-            Password: password
+            Email: email,
+            Name: React.findDOMNode(this.refs.userName).value,
+            Password: React.findDOMNode(this.refs.password).value
         };
         $.ajax({
             url: "http://www.cleanair4you.com/AccountManagement/Signup",
@@ -19,7 +17,7 @@
             data: data,
             success: function (data) {
                 this.setState({ completed: true });
-                dumbBus.updateAll("account");
+                this.props.updateEmail(email)
             }.bind(this)
         });
     },
@@ -34,7 +32,3 @@
     );
     }
 });
-React.render(
-  <AccountInfoBox />,
-  document.getElementById('ca4u-account')
-);
