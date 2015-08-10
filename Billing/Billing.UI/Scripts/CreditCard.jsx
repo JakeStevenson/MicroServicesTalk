@@ -11,15 +11,18 @@
             dataType: 'json',
             type: 'POST',
             data: data,
-            done: function (data) {
-                this.setState({ data: data });
+            success: function (data) {
+                this.setState({ display: false });
+                dumbBus.updateAll("ccdone");
             }.bind(this)
         });
     },
     render: function () {
         var self = this;
         dumbBus.updaters.push(function (message) {
-            self.setState({display: true});
+            if(message==="account"){
+                self.setState({display: true});
+            }
         });
         return ( this.state.display ? 
          <form class="creditCardForm" onSubmit={this.handleSubmit}>

@@ -18,8 +18,16 @@
 
 <div id="ca4u-account"></div>
 <div id="ca4u-billing"></div>
+<div id="ca4u-success" style="display: none;">Thanks, We'll be in touch!</div>
 
 <script src="http://fb.me/react-0.13.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
 <script src="/Scripts/AccountInfo.jsx"></script>
 <script src="http://billing.cleanair4you.com/Scripts/CreditCard.jsx"></script>
+<script>
+    dumbBus.updaters.push(function(message) {
+        if (message === "ccdone") {
+            $("#ca4u-success").show();
+        }
+    })
+</script>
