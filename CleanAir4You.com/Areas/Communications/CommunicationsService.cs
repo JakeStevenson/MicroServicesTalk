@@ -6,12 +6,12 @@ namespace CleanAir4You.com.Areas.Communications
     {
         public void EmailWelcomeMessage(string email)
         {
-            Debug.WriteLine("Emailing welcome to {0}", email);
+            Debug.WriteLine(string.Format("Emailing welcome to {0}", email));
         }
 
         public void EmailBillingMessage(string email)
         {
-            Debug.WriteLine("Emailing billing to {0}", email);
+            Debug.WriteLine(string.Format("Emailing billing to {0}", email));
         }
     }
 }
